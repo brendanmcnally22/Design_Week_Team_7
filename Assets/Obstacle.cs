@@ -10,11 +10,8 @@ public class Obstacle : MonoBehaviour
         {
             if (!playerColl.isIt)
             {
-                // the player who is not "IT" should be affected
-                Debug.Log(other.gameObject.name + " hit an obstacle!");
-
-                // send player back to spawn
-                other.transform.position = new Vector2(0, 0); // Change to your respawn point
+                // player who is it please pass through please omgggg PLEASE 
+                Physics2D.IgnoreCollision(other, GetComponent<Collider2D>());
             }
             else
             {
